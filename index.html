@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Кэт энерджи</title>
+
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <section class="page-header__wrapper">
+        <a class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/desktop/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+            <img class="page-header__logo-img" src="img/mobile/logo-mobile.svg" width="34" height="38" alt="Логотип магазина.">
+          </picture>
+        </a>
+        <a class="page-header__logo-title">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/tablet/logo-cat-energy.svg">
+            <img class="page-header__cat-energy" src="img/mobile/cat-energy-mobile.svg" width="101" height="18" alt="Cat energy.">
+          </picture>
+        </a>
+        <!--
+          При инициализации header-nav.js
+          добавляется класс page-header__wrapper-nav--closed
+          при клике на кнопку page-header__toggle класс меняется на page-header__wrapper-nav--opened
+        -->
+        <nav class="page-header__wrapper-nav">
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special page-header__link--special-active">
+                  Главная
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="catalog.html" aria-label="Перейти на страницу каталога продукции.">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link page-header__link--special" href="form.html" aria-label="Перейти на страницу подбора программы питания.">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <main class="page-main">
+      <header class="page-main__promo promo">
+        <div class="promo__wrapper page-content">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <picture class="promo__picture">
+            <source type="image/webp"  media="(min-width: 1200px)" srcset="img/desktop/main/index-can-desktop.webp 1x, img/desktop/main/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/main/index-can-tablet.webp 1x, img/tablet/main/index-can-tablet@2x.webp 2x">
+            <source type="image/webp"  srcset="img/mobile/main/index-can-mobile.webp 1x, img/mobile/main/index-can-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1200px)" srcset="img/desktop/main/index-can-desktop.png 1x, img/desktop/main/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/tablet/main/index-can-tablet.png 1x, img/tablet/main/index-can-tablet@2x.png 2x">
+            <img class="promo__img" src="img/mobile/main/index-can-mobile.png" srcset="img/mobile/main/index-can-mobile@2x.png" width="280" height="270" alt="Cat Energy Pro: Курица">
+          </picture>
+          <a class="promo__button button button-primary" href="form.html" aria-label="Перейти на страницу заполнения формы для подбора программы питания.">
+            <span>Подобрать программу</span>
+          </a>
+        </div>
+        <div class="promo__bg"></div>
+      </header>
+      <section class="page-main__program program page-content">
+        <h2 class="visually-hidden">Программы</h2>
+        <ul class="program__list">
+          <li class="program__item">
+            <h3 class="program__title program__title--slim">Похудение</h3>
+            <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="program__link" href="#" aria-label="Перейти на страницу выбора питания для похудения.">Каталог slim</a>
+          </li>
+          <li class="program__item">
+            <h3 class="program__title program__title--gain">Набор массы</h3>
+            <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="program__link" href="#" aria-label="Перейти на страницу выбора питания для набора массы.">Каталог pro</a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__usage usage page-content">
+        <h2 class="usage__title">Как это работает</h2>
+        <ul class="usage__list">
+          <li class="usage__item usage__item--useful">
+            <h3 class="usage__subtitle visually-hidden">Полезно</h3>
+            <p class="usage__description">Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="usage__item usage__item--simple">
+            <h3 class="usage__subtitle visually-hidden">Просто</h3>
+            <p class="usage__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          </li>
+          <li class="usage__item usage__item--comfortable">
+            <h3 class="usage__subtitle visually-hidden">Комфортно</h3>
+            <p class="usage__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="usage__item usage__item--working">
+            <h3 class="usage__subtitle visually-hidden">Действенно</h3>
+            <p class="usage__description">Уже&#160;через&#160;месяц наслаждайтесь изменениями к лучшему вашего&#160;питомца!</p>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__example example">
+        <div class="example__wrapper page-content">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <dl class="example__list">
+            <div class="example__item">
+              <dt class="example__term">5 кг</dt>
+              <dd class="example__desc">Снижение веса</dd>
+            </div>
+            <div class="example__item">
+              <dt class="example__term">60 дней</dt>
+              <dd class="example__desc">Затрачено времени</dd>
+            </div>
+            <div class="example__item-important">
+              <dt class="example__term-important">Затраты на питание:</dt>
+              <dd class="example__desc-important">15 000 руб.</dd>
+            </div>
+          </dl>
+          <div class="example__slider">
+            <ol class="example__cats">
+              <li class="example__cat example__cat--after"></li>
+              <li class="example__cat example__cat--before"></li>
+            </ol>
+            <div class="example__condition">
+              <button class="example__after" aria-label="Показать каким был кот До Cat-Energy.">Было</button>
+              <!--при отсутствии возможности использования префиксов в стилях
+              <input class="input-range example__range" type="range" id="condition" name="condition" min="0" max="100" value="50" step="50" aria-label="Изменить состояние кота.">
+              -->
+              <div class="input-range example__range">
+                <button class="input-range__thumb example__thumb" aria-label="Изменить состояние кота."></button>
+              </div>
+              <!--при отсутствии возможности использования префиксов в стилях
+              <label class="visually-hidden" for="condition">Изменить состояние кота.</label>
+              -->
+              <button class="example__before" aria-label="Показать каким кот стал после Cat-Energy.">Стало</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__content contacts__content--special">
+            <p class="contacts__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <address class="contacts__address">
+              <span>ул. Большая Конюшенная, д. 19/8</span>
+              <span class="contacts__city">
+                Санкт-Петербург
+              </span>
+            </address>
+          </div>
+        </div>
+        <div id="map" class="contacts__map"></div>
+      </section>
+      <section class="page-footer__wrapper page-content">
+        <a class="page-footer__logo-title">
+          <svg width="128" height="24" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#footer-logo"></use>
+          </svg>
+        </a>
+        <ul class="page-footer__social">
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="https://vk.com/htmlacademy" aria-label="Перейти на нашу страницу в Вконтакте.">
+              <svg class="page-footer__vkontakte" width="23" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="https://www.instagram.com/htmlacademy" aria-label="Перейти на нашу страницу в Инстаграме.">
+              <svg class="page-footer__instagram" width="16" height="16" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__link" href="https://www.facebook.com/htmlacademy" aria-label="Перейти на нашу страницу в Фейсбуке.">
+              <svg class="page-footer__facebook" width="22" height="22" aria-hidden="true" focusable="false" fill="none">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__academy-text" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать так же сайты.">
+            <span>HTML Academy</span>
+          </a>
+          <a class="page-footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу HTML-academy и научится верстать так же сайты.">
+            <svg class="page-footer__logo-html" width="27" height="34">
+              <use xlink:href="img/sprite.svg#logo-html-academy"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="js/header-nav.js" type="text/javascript"></script>
+    <script src="js/example-cats.js" type="text/javascript"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+  </body>
+</html>
