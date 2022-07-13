@@ -1,0 +1,136 @@
+.usage__title {
+  margin: 0 0 39px 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.usage__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 19px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.usage__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.usage__item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 61px;
+  height: 61px;
+  background-color: @base-green;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.usage__item--useful::before {
+  background-image: url("../img/icons/usage-leaf.svg");
+}
+
+.usage__item--simple::before {
+  background-image: url("../img/icons/usage-tub.svg");
+}
+
+.usage__item--comfortable::before {
+  background-image: url("../img/icons/usage-eat.svg");
+}
+
+.usage__item--working::before {
+  background-image: url("../img/icons/usage-alarm.svg");
+}
+
+.usage__description {
+  margin: 0 0 0 20px;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special-grey-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .usage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 138px;
+    row-gap: 90px;
+  }
+
+  .usage__item {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 245px;
+    min-height: 227px;
+  }
+
+  .usage__item::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .usage__item::after {
+    position: absolute;
+    top: -40px;
+    left: 115px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @base-gray;
+  }
+
+  .usage__item--useful::after {
+    content: "1";
+  }
+
+  .usage__item--simple::after {
+    content: "2";
+  }
+
+  .usage__item--comfortable::after {
+    content: "3";
+  }
+
+  .usage__item--working::after {
+    content: "4";
+  }
+
+  .usage__description {
+    z-index: 1;
+    margin-left: 0;
+    margin-top: 31px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .usage__title {
+    margin-left: 7px;
+  }
+
+  .usage__list {
+    column-gap: 73px;
+    justify-content: flex-start;
+  }
+
+  .usage__item {
+    width: 245px;
+    padding-left: 7px;
+    flex-shrink: 0;
+  }
+}

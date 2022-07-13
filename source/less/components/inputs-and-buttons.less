@@ -1,0 +1,456 @@
+/* BUTTON */
+.button-primary {
+  padding: 11px 44px 10px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: @base-green;
+  border: none;
+  box-sizing: border-box;
+}
+
+.button-primary:hover {
+  background-color: @base-green-2;
+}
+
+.button-primary:active span {
+  opacity: 0.3;
+}
+
+.button-second {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @special-grey-dark;
+  background-color: @base-gray;
+  text-decoration: none;
+}
+
+/* INPUT */
+
+/* TEXT */
+.input-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.input-text__span {
+  margin-right: 13px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: @special-grey-dark;
+}
+
+.input-text__input {
+  position: relative;
+  flex-grow: 1;
+  padding: 14px 51px 14px 15px;
+  width: calc(100% - 20px);
+  height: 43px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: @special-grey-dark;
+  border: none;
+  outline: 1px solid @special-grey-light;
+  box-sizing: border-box;
+}
+
+.input-text__mail {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 18px;
+  height: 13px;
+  fill: none;
+  stroke: @special-dark-grey-2;
+}
+
+.input-text__phone {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+.input-text__input:focus ~ .input-text__mail {
+  stroke: @base-green;
+}
+
+.input-text__input:focus ~ .input-text__phone {
+  stroke: @base-green;
+}
+
+.input-text__input:invalid .input-text__mail {
+  fill: @status-error;
+}
+
+.input-text__input:invalid ~ .input-text__phone {
+  stroke: @status-error;
+}
+
+.input-text__input:hover {
+  outline: 1px solid @special-grey;
+}
+
+.input-text__input:focus {
+  outline: 1px solid @special-grey-dark;
+}
+
+.input-text__input:invalid {
+  outline: 1px solid @status-error;
+}
+
+/* AREA */
+
+.input-area {
+  display: flex;
+  min-height: 150px;
+}
+
+.input-area__input {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px 10px 16px 15px;
+  font-size: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-grey-dark;
+  border: 1px solid @special-grey-light;
+  box-sizing: border-box;
+}
+
+.input-area__input:hover {
+  outline: 1px solid @special-grey;
+}
+
+.input-area__input:focus {
+  outline: 1px solid @special-grey-dark;
+}
+
+.input-area__input:invalid {
+  outline: 1px solid @status-error;
+}
+
+/* CHECKBOX */
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.input-checkbox__input {
+  width: 30px;
+  height: 30px;
+  margin-right: 13px;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.input-checkbox__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+
+.input-checkbox__input:checked ~ .input-checkbox__mark::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/icons/tick.svg");
+}
+
+.input-checkbox__input:disabled,
+.input-checkbox__input:disabled ~ .input-checkbox__span {
+  opacity: 0.3;
+}
+
+.input-checkbox__input:focus ~ .input-checkbox__span {
+  outline: 1px solid @special-grey-dark;
+}
+
+.input-checkbox__span {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/* RADIO */
+
+.input-radio {
+  display: flex;
+  align-items: center;
+}
+
+.input-radio__input {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px 0 0;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.input-radio__mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border: 1px solid @special-grey;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.input-radio__input:checked ~ .input-radio__mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  content: "";
+  background-color: @base-green;
+  border-radius: 50%;
+}
+
+.input-radio__span {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-dark-grey-2;
+}
+
+.input-radio__input:disabled,
+.input-radio__input:disabled ~ .input-radio__span {
+  opacity: 0.3;
+}
+
+/* RANGE */
+
+.input-range {
+  position: relative;
+  width: 86px;
+  height: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  //ругается stylelint
+  // -webkit-appearance: none;
+}
+
+.input-range__thumb {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-100%);
+  height: 6px;
+  width: 36px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: none;
+}
+
+/* Стилизация для браузеров */
+/*
+.input-range::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+.input-range::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+.input-range::-moz-range-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+.input-range::-ms-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dcdcdc;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+}
+.input-range::-ms-thumb {
+  height: 34px;
+  width: 34px;
+  margin-top: -15px;
+  border-radius: 17px;
+  background-color: @base-green;
+  cursor: pointer;
+  border: 13px solid #ffffff;
+  outline: 1px solid @special-grey;
+}
+ */
+
+@media (min-width: @tablet-width) {
+  /* BUTTON */
+  .button-primary {
+    padding: 10px 26px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* TEXT */
+  .input-text__span {
+    margin-right: 18px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .input-text__input {
+    height: 52px;
+    padding-top: 11px;
+    padding-left: 18px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* AREA */
+  .input-area__input {
+    padding-left: 17px;
+    min-height: 175px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* CHECKBOX */
+  .input-checkbox__span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .input-checkbox__input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .input-checkbox__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* RADIO */
+  .input-radio__span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .input-radio__input {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .input-radio__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .input-radio__input:checked ~ .input-radio__mark::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* RANGE */
+  .input-range {
+    margin: 17px 0;
+    width: 100%;
+    height: 6px;
+    background: #dcdcdc;
+  }
+
+  .input-range__thumb {
+    transform: translateX(-50%);
+    height: 34px;
+    width: 34px;
+    margin-top: -15px;
+    padding: 4px;
+    border-radius: 17px;
+    background-color: @base-green;
+    border: 13px solid #ffffff;
+    outline: 1px solid @special-grey;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  .input-range__thumb:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  .input-range__thumb:active {
+    outline-color: @base-green;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input-area__input {
+    min-height: 175px;
+    padding-left: 18px;
+  }
+
+  .input-text__mail {
+    right: 20px;
+  }
+
+  .input-text__phone {
+    right: 15px;
+  }
+}

@@ -1,0 +1,318 @@
+.catalog-extra__wrap-title {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.catalog-extra__title {
+  width: 100%;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @special-dark-grey-2;
+}
+
+.catalog-extra__wrap-title::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(2px);
+  width: 100%;
+  height: 2px;
+  background-color: @base-green;
+}
+
+.catalog-extra__span {
+  position: relative;
+  display: block;
+  margin-top: 27px;
+  width: fit-content;
+  padding-right: 22px;
+  padding-left: 20px;
+  background-color: #ffffff;
+}
+
+.catalog-extra__wrap {
+  margin-top: 33px;
+}
+
+.catalog-extra__list {
+  margin: 0 0 35px 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid @base-grey-2;
+}
+
+.catalog-extra__item {
+  padding: 13px 0 19px 0;
+  border-bottom: 1px solid @base-grey-2;
+}
+
+.catalog-extra__product {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @special-dark-grey-2;
+}
+
+.catalog-extra__parameters {
+  margin: 14px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-extra__term,
+.catalog-extra__desc {
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: @special-grey-dark;
+}
+
+.catalog-extra__order {
+  width: 100%;
+}
+
+.catalog-extra__promo {
+  position: relative;
+  height: 290px;
+  margin-bottom: 35px;
+  background-color: @base-grey-2;
+  background-image: url("../img/washing-cat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.catalog-extra__promo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 183, 56, 0.85);
+}
+
+.catalog-extra__promo-link {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 42px 55px;
+  box-sizing: border-box;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.catalog-extra__event {
+  z-index: 1;
+  width: 161px;
+  margin: 0;
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.catalog-extra__event::before {
+  position: absolute;
+  content: "";
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/icons/gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-extra__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .catalog-extra__span {
+    margin-left: 32px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  .catalog-extra__wrap {
+    margin-top: 80px;
+  }
+
+  .catalog-extra__list {
+    margin-bottom: 69px;
+    border: 1px solid @base-grey-2;
+  }
+
+  .catalog-extra__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 21px;
+    align-content: center;
+    padding: 25px 38px 27px 38px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .catalog-extra__product {
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .catalog-extra__parameters {
+    margin: 4px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: flex-end;
+  }
+
+  .catalog-extra__promo {
+    margin-bottom: 76px;
+    height: 200px;
+    background-image: url("../img/tablet/catalog/washing-cat-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/catalog/washing-cat-tablet@2x.jpg");
+    }
+  }
+
+  .catalog-extra__promo-link {
+    justify-content: flex-end;
+    padding-right: 124px;
+  }
+
+  .catalog-extra__event {
+    text-align: left;
+    margin: auto 0;
+    padding-top: 5px;
+  }
+
+  .catalog-extra__event::before {
+    left: 79px;
+    top: 59px;
+    transform: translateX(0);
+  }
+
+  .catalog-extra__term,
+  .catalog-extra__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog-extra__desc {
+    margin-left: 0;
+    min-width: 93px;
+    text-align: right;
+  }
+
+  .catalog-extra__term {
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-extra {
+    margin-bottom: 83px;
+  }
+
+  .catalog-extra__wrap-title {
+    margin-top: 75px;
+    margin-bottom: 81px;
+  }
+
+  .catalog-extra__wrap-title::before {
+    transform: translateY(4px);
+  }
+
+  .catalog-extra__title {
+    width: 1285px;
+    margin: 0 auto;
+  }
+
+  .catalog-extra__span {
+    padding-right: 35px;
+    padding-left: 40px;
+    margin-left: 0;
+  }
+
+  .catalog-extra__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .catalog-extra__list {
+    width: 896px;
+    margin-bottom: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .catalog-extra__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px 0 17px;
+  }
+
+  .catalog-extra__product {
+    margin-right: auto;
+    padding-left: 2px;
+  }
+
+  .catalog-extra__parameters {
+    justify-content: space-between;
+    width: 286px;
+    margin-right: 40px;
+    margin-top: 8px;
+  }
+
+  .catalog-extra__promo {
+    width: auto;
+    height: inherit;
+    margin: 0;
+    align-items: flex-end;
+    background-image: url("../img/desktop/catalog/washing-cat-desctop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/catalog/washing-cat-desctop@2x.jpg");
+    }
+  }
+
+  .catalog-extra__order {
+    width: 244px;
+  }
+
+  .catalog-extra__term,
+  .catalog-extra__desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog-extra__promo-link {
+    padding: 40px 40px 45px;
+  }
+
+  .catalog-extra__event {
+    width: 165px;
+    margin: auto 0 0;
+    text-align: center;
+  }
+}
